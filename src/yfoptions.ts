@@ -7,7 +7,8 @@ export const reshapeData = (data: { [k: string]: any }) => {
   return tmp;
 };
 
-export const options = async (symbol: string) => {
+export const optionChain = async (symbol: string) => {
+  console.log(baseURL + symbol)
   const data = await axios.get(baseURL + symbol).then(res => res.data);
   return reshapeData(data);
 };

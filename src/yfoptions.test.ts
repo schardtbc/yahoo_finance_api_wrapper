@@ -5,7 +5,7 @@
 import * as yfo from "./yfoptions";
 
 test("options()", async () => {
-  const tmp = await yfo.options("AAPL");
+  const tmp = await yfo.optionChain("AAPL");
   expect(tmp).toEqual(
     expect.arrayContaining([
       expect.objectContaining({
