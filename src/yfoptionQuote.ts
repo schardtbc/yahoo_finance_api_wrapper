@@ -8,7 +8,6 @@ export const reshapeData = (data: { [k: string]: any }) => {
 };
 
 export const optionQuote = async (symbol: string) => {
-    console.log(baseURL + symbol)
   const data = await axios.get(baseURL + symbol).then(res => res.data);
   return reshapeData(data);
 };
