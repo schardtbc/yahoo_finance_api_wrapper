@@ -135,7 +135,7 @@ test("options()", async () => {
 
 
 test("options() with expirationDate", async () => {
-  const tmp = await yfo.optionChain("AAPL", 1610668800);
+  const tmp = await yfo.optionChain("AAPL", 1592524800);
   expect(tmp).toEqual(
     expect.arrayContaining([
       expect.objectContaining({
@@ -207,7 +207,7 @@ test("options() with expirationDate", async () => {
           earningsTimestamp: expect.any(Number),
           earningsTimestampStart: expect.any(Number),
           earningsTimestampEnd: expect.any(Number),
-          trailingAnnualDividendRate: 2.72,
+          trailingAnnualDividendRate: expect.any(Number),
           trailingPE: expect.any(Number),
           trailingAnnualDividendYield: expect.any(Number),
           epsTrailingTwelveMonths: expect.any(Number),

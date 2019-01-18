@@ -14,7 +14,7 @@ export const reshapeData = (data: IOptionResults) => {
 export const optionChain = async (symbol: string, expirationDate: number = 0) => {
   let dateParm: string ="";
   if (expirationDate) {
-     dateParm ="?&date" + expirationDate.toString();
+     dateParm ="?&date=" + expirationDate.toString();
   }
   const data = await axios.get(baseURL + symbol + dateParm).then(res => res.data);
   return reshapeData(data);
