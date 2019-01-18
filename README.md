@@ -25,6 +25,6 @@ import { YahooFinance } from "yahoo_finance_api_wrapper"
 ```javascript
 export declare class YahooFinance {
     static quote: (symbol: string) => Promise<any>;
-    static optionChain: (symbol: string) => Promise<any>;
+    static optionChain: (symbol: string, expirationDate: number = 0) => Promise<any>;
     static optionQuote: (symbol: string) => Promise<any>;
 }

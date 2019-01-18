@@ -2,8 +2,12 @@ import axios from "axios";
 
 const baseURL = "https://query1.finance.yahoo.com/v7/finance/options/";
 
-export const reshapeData = (data: { [k: string]: any }) => {
-  const tmp = data["optionChain"]["result"][0]["quote"];
+interface IOptionResults {
+  optionChain: {result: [{quote: object, options: object}]}
+}
+
+export const reshapeData = (data: IOptionResults) => {
+  const tmp = data.optionChain.result[0].quote;
   return tmp;
 };
 
