@@ -2,12 +2,11 @@
  * @jest-environment node
  */
 
-import * as yfo from "./yfoptions";
+import { optionChain } from "./OptionChain";
 
 test("options()", async () => {
-  const tmp = await yfo.optionChain("AAPL");
+  const tmp = await optionChain("AAPL");
   expect(tmp).toEqual(
-    expect.arrayContaining([
       expect.objectContaining({
         underlyingSymbol: expect.any(String),
         expirationDates: expect.arrayContaining([expect.any(Number)]),
@@ -129,15 +128,13 @@ test("options()", async () => {
           })
         ])
       })
-    ])
   );
 });
 
 
 test("options() with expirationDate", async () => {
-  const tmp = await yfo.optionChain("AAPL", 1592524800);
+  const tmp = await optionChain("AAPL", 1592524800);
   expect(tmp).toEqual(
-    expect.arrayContaining([
       expect.objectContaining({
         underlyingSymbol: expect.any(String),
         expirationDates: expect.arrayContaining([expect.any(Number)]),
@@ -259,6 +256,5 @@ test("options() with expirationDate", async () => {
           })
         ])
       })
-    ])
   );
 });

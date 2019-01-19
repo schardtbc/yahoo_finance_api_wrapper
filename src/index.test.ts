@@ -72,7 +72,7 @@ test("YahooFinance.quote()", async () => {
         earningsTimestamp: expect.any(Number),
         earningsTimestampStart: expect.any(Number),
         earningsTimestampEnd: expect.any(Number),
-        trailingAnnualDividendRate: 2.72,
+        trailingAnnualDividendRate: expect.any(Number),
         trailingPE: expect.any(Number),
         trailingAnnualDividendYield: expect.any(Number),
         epsTrailingTwelveMonths: expect.any(Number),
@@ -86,7 +86,6 @@ test("YahooFinance.quote()", async () => {
 test("YahooFinance.optionChain()", async () => {
   const tmp = await YahooFinance.optionChain("AAPL");
   expect(tmp).toEqual(
-    expect.arrayContaining([
       expect.objectContaining({
         underlyingSymbol: expect.any(String),
         expirationDates: expect.arrayContaining([expect.any(Number)]),
@@ -156,7 +155,7 @@ test("YahooFinance.optionChain()", async () => {
           earningsTimestamp: expect.any(Number),
           earningsTimestampStart: expect.any(Number),
           earningsTimestampEnd: expect.any(Number),
-          trailingAnnualDividendRate: 2.72,
+          trailingAnnualDividendRate: expect.any(Number),
           trailingPE: expect.any(Number),
           trailingAnnualDividendYield: expect.any(Number),
           epsTrailingTwelveMonths: expect.any(Number),
@@ -208,12 +207,11 @@ test("YahooFinance.optionChain()", async () => {
           })
         ])
       })
-    ])
   );
 });
 
 test("YahooFinance.optionQuote()", async () => {
-  const tmp = await YahooFinance.optionQuote("AAPL190118C00150000");
+  const tmp = await YahooFinance.optionQuote("AAPL190125C00150000");
   expect(tmp).toEqual(
       expect.objectContaining({
         language: expect.any(String),

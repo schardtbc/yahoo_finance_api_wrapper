@@ -2,11 +2,11 @@
  * @jest-environment node
  */
 
-import * as yfoq from "./yfoptionQuote";
+import { optionQuote } from "./OptionQuote";
 
 
 test("optionQuote()", async () => {
-    const tmp = await yfoq.optionQuote("AAPL190118C00150000");
+    const tmp = await optionQuote("AAPL190125C00150000");
     expect(tmp).toEqual(
         expect.objectContaining({
           language: expect.any(String),

@@ -2,10 +2,10 @@
  * @jest-environment node
  */
 
-import * as yfq from "./yfquote";
+import { quote } from "./Quote";
 
 test("quote()", async () => {
-  const tmp = await yfq.quote("AAPL");
+  const tmp = await quote("AAPL");
   expect(tmp).toEqual(
     expect.arrayContaining([
       expect.objectContaining({
