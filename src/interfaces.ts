@@ -1,3 +1,75 @@
+export interface IMarketQuote {
+        language: string;
+        region: string;
+        quoteType: string;
+        quoteSourceName: string ;
+        currency: string;
+        regularMarketPrice: number;
+        regularMarketTime: number;
+        regularMarketChange: number;
+        regularMarketOpen: number;
+        regularMarketDayHigh: number;
+        regularMarketDayLow: number;
+        regularMarketVolume: number;
+        regularMarketChangePercent: number;
+        regularMarketDayRange: string;
+        regularMarketPreviousClose: number;
+        bid: number;
+        ask: number;
+        bidSize: number;
+        askSize: number;
+        messageBoardId: string;
+        fullExchangeName: string;
+        longName: string;
+        financialCurrency: string;
+        postMarketChangePercent: number;
+        postMarketTime: number;
+        postMarketPrice: number;
+        postMarketChange: number;
+        priceHint: number;
+        fiftyDayAverageChangePercent: number;
+        twoHundredDayAverage: number;
+        twoHundredDayAverageChange: number;
+        twoHundredDayAverageChangePercent: number;
+        marketCap: number;
+        forwardPE: number;
+        esgPopulated: boolean;
+        tradeable: boolean;
+        sharesOutstanding: number;
+        bookValue: number;
+        fiftyDayAverage: number;
+        fiftyDayAverageChange: number;
+        epsTrailingTwelveMonths: number;
+        epsForward: number;
+        averageDailyVolume3Month: number;
+        averageDailyVolume10Day: number;
+        fiftyTwoWeekLowChange: number;
+        fiftyTwoWeekLowChangePercent: number;
+        fiftyTwoWeekRange: string;
+        fiftyTwoWeekHighChange: number;
+        fiftyTwoWeekHighChangePercent: number;
+        fiftyTwoWeekLow: number;
+        fiftyTwoWeekHigh: number;
+        dividendDate: number;
+        earningsTimestamp: number;
+        earningsTimestampStart: number;
+        earningsTimestampEnd: number;
+        trailingAnnualDividendRate: number;
+        trailingPE: number;
+        trailingAnnualDividendYield: number;
+        shortName: string;
+        exchangeDataDelayedBy: number;
+        exchange: string;
+        priceToBook: number;
+        sourceInterval: number;
+        exchangeTimezoneName: string;
+        exchangeTimezoneShortName: string;
+        gmtOffSetMilliseconds: number;
+        marketState: string;
+        market: string;
+        symbol: string;
+    }
+
 
 export interface IQuote {
     language: string;
@@ -168,7 +240,7 @@ export interface IOptionChainApi {
 }
 
 export interface IQuoteApi {
-    quoteResponse:  { result: IQuote[]};
+    quoteResponse:  { result: IMarketQuote[]};
     error: any
 }
 
