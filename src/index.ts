@@ -15,5 +15,5 @@ export class YahooFinance {
 }
 
 export { IQuote as IQuote }
-export { IOptionChain as IOptionChanin }
+export { IOptionChain as IOptionChain }
 export { IOptionQuote as IOptionQuote }
