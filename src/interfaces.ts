@@ -140,8 +140,8 @@ export interface IContract {
 export interface IOptions {
     expirationDate: number;
     hasMiniOptions: boolean; 
-    calls: [IContract]
-    puts: [IContract]
+    calls: IContract[]
+    puts:  IContract[]
   }
 
 export interface IOptionChain {
@@ -150,7 +150,7 @@ export interface IOptionChain {
   strikes: number[];
   hasMiniOptions: boolean;
   quote: IQuote
-  options: [IOptions]
+  options: IOptions[]
 };
 
 export interface IOptionQuoteResult {
