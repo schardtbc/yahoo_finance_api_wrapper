@@ -4,7 +4,7 @@ import { optionChain } from "./OptionChain";
 
 import { quote }  from "./Quote";
 
-import { IContract, IOptionChain, IOptionQuote, IOptions,  IQuote } from "./interfaces"
+import { IContract, IMarketQuote, IOptionChain, IOptionQuote, IOptions,  IQuote } from "./interfaces"
 
 export class YahooFinance {
   public static quote = quote;
@@ -14,6 +14,7 @@ export class YahooFinance {
   public static optionQuote = optionQuote;
 }
 
+export { IMarketQuote as IMarketQuote}
 export { IQuote as IQuote }
 export { IOptionChain as IOptionChain }
 export { IOptionQuote as IOptionQuote }
