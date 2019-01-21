@@ -221,7 +221,7 @@ export interface IOptionChain {
   expirationDates: number[];
   strikes: number[];
   hasMiniOptions: boolean;
-  quote: IQuote
+  quote: IOptionQuote
   options: IOptions[]
 };
 
