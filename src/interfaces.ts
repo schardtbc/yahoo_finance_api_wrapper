@@ -231,7 +231,7 @@ export interface IOptionQuoteResult {
   strikes: number[];
   hasMiniOptions: boolean;
   quote: IOptionQuote;
-  options: any
+  options: IOptions[]
 }
 
 export interface IOptionChainApi {
