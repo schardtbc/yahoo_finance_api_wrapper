@@ -72,7 +72,7 @@ test("quote()", async () => {
         earningsTimestamp: expect.any(Number),
         earningsTimestampStart: expect.any(Number),
         earningsTimestampEnd: expect.any(Number),
-        trailingAnnualDividendRate: 2.72,
+        trailingAnnualDividendRate: expect.any(Number),
         trailingPE: expect.any(Number),
         trailingAnnualDividendYield: expect.any(Number),
         epsTrailingTwelveMonths: expect.any(Number),

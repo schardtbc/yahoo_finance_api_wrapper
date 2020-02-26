@@ -76,7 +76,7 @@ test("options()", async () => {
           earningsTimestamp: expect.any(Number),
           earningsTimestampStart: expect.any(Number),
           earningsTimestampEnd: expect.any(Number),
-          trailingAnnualDividendRate: 2.72,
+          trailingAnnualDividendRate: expect.any(Number),
           trailingPE: expect.any(Number),
           trailingAnnualDividendYield: expect.any(Number),
           epsTrailingTwelveMonths: expect.any(Number),
@@ -103,7 +103,7 @@ test("options()", async () => {
                 expiration: expect.any(Number),
                 lastTradeDate: expect.any(Number),
                 impliedVolatility: expect.any(Number),
-                inTheMoney: true
+                inTheMoney: expect.any(Boolean)
               })
             ]),
             puts: expect.arrayContaining([
@@ -122,7 +122,7 @@ test("options()", async () => {
                 expiration: expect.any(Number),
                 lastTradeDate: expect.any(Number),
                 impliedVolatility: expect.any(Number),
-                inTheMoney: true
+                inTheMoney: expect.any(Boolean)
               })
             ])
           })

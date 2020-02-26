@@ -182,7 +182,7 @@ test("YahooFinance.optionChain()", async () => {
                 expiration: expect.any(Number),
                 lastTradeDate: expect.any(Number),
                 impliedVolatility: expect.any(Number),
-                inTheMoney: true
+                inTheMoney: expect.any(Boolean)
               })
             ]),
             puts: expect.arrayContaining([
@@ -201,7 +201,7 @@ test("YahooFinance.optionChain()", async () => {
                 expiration: expect.any(Number),
                 lastTradeDate: expect.any(Number),
                 impliedVolatility: expect.any(Number),
-                inTheMoney: true
+                inTheMoney: expect.any(Boolean)
               })
             ])
           })
@@ -211,7 +211,7 @@ test("YahooFinance.optionChain()", async () => {
 });
 
 test("YahooFinance.optionQuote()", async () => {
-  const tmp = await YahooFinance.optionQuote("AAPL190125C00150000");
+  const tmp = await YahooFinance.optionQuote("AAPL200320C00300000");
   expect(tmp).toEqual(
       expect.objectContaining({
         language: expect.any(String),
